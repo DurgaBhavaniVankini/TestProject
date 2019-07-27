@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<body id="regid" data-ng-controller="RegistrationController">   
+		<div class="container"><br><br>
+		<form>
+										<br> <label class="control-label col-md-2">Name:</label>
+										<div class="col-md-4">
+											<input type="text" class="form-control"
+												data-ng-model="data.object.myname" data-ng-value=>
+										</div>
+										<label class="control-label col-md-2">Guardian Name:</label>
+										<div class="col-md-4">
+											<input type="text" class="form-control"
+												data-ng-model="data.object.fathername">
+										</div>
+										<br> <br> <br> <br> <label
+											class="control-label col-md-2">Mobile Number:</label>
+										<div class="col-md-4">
+											<input type="text" class="form-control"
+												data-ng-model="data.object.mobileno">
+										</div>
+										<label class="control-label col-md-2">Email ID:</label>
+										<div class="col-md-4">
+											<input type="text" class="form-control"
+												data-ng-model="data.object.email">
+										</div>
+										<br> <br> <br> <br> <label
+											class="control-label col-md-2">Gender:</label>
+										<div class="radio  col-md-4">
+											<select class="selectpicker"
+												data-ng-model="data.object.gender">
+												<option>Male</option>
+												<option>Female</option>
+											</select>
+										</div>
+										<label class="control-label col-md-2">Address</label>
+										<div class="col-md-4">
+											<textarea class="form-control"
+												data-ng-model="data.object.address"></textarea>
+										</div>
+									</form>
+									<button type="button" id="add" class="btn btn-primary"
+								data-ng-click="registration(data.object);" 
+								style="width: 100px">Register</button>
+		</div>
+		
+
+</body>
+</html>
