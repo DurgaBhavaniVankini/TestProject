@@ -1,0 +1,77 @@
+<html>
+<head>   
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="APSSDC Application">
+	<meta name="author" content="APSSDC">
+	<link rel="icon" href="/attendance/images/login/applicationIcon.jpg" />
+	
+	<title>Andhra Pradesh State Skill Development Corporation </title>            
+	       
+	<!-- Built - IN CSS -->   
+	 <link href="/andromeda/css/bootstrap/prettyPhoto.css" rel="stylesheet">         
+	<link href="/andromeda/css/bootstrap/jquery-ui.css" rel="stylesheet">
+	<link href="/andromeda/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="/andromeda/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/andromeda/scripts/lib/angular/angular-ui.min.css">
+	<link rel="stylesheet" href="/aadhaarservices/css/lib/font-awesome.min.css"/>              
+	              
+	                      
+	<!-- Custom CSS -->            
+	 <link href="/andromeda/css/general/andromeda.css" rel="stylesheet" />      
+	<link rel="stylesheet" href="/newaadhaarservice/css/general/Style.css"/>   
+	   
+	<!-- Built- IN Scripts  -->     
+	<script type="text/javascript" src="/andromeda/scripts/lib/angular/angular.js"></script>
+	<script src="/FIP/scripts/lib/angular-base64.js"></script>
+	<script src="/FIP/scripts/lib/angular-base64.min.js"></script>
+ 	<script src="/igdc/script/plugins/angular/angular.min.js"></script> 
+	<script src="/andromeda/scripts/lib/jquery-2.1.1.js"></script>  
+	<script src="/aadhaarService/scripts/lib/jquery-ui.js"></script>     
+    <script src="/andromeda/scripts/lib/bootstrap.min.js"></script> 
+	
+	<script src="/andromeda/scripts/lib/angular/angular-ui.min.js"></script>  
+	<script	src="/andromeda/scripts/lib/angular/angular-route.js"></script>       
+	<script src="/andromeda/scripts/lib/jquery.prettyPhoto.js"></script>
+	<script src="/andromeda/scripts/lib/FileSaver.js"></script>
+	
+	
+	<script src="/newaadhaarservice/scripts/common/sweetalert-dev.js"></script>  
+	<link rel="stylesheet" href="/newaadhaarservice/css/general/sweetalert.css">       
+	
+	 
+
+	<!-- Custom Scripts -->
+    <script type="text/javascript" src="/newaadhaarservice/scripts/common/Andromeda.js"></script>
+	
+	<script type="text/javascript" src="/newaadhaarservice/scripts/general/formModule.js"></script>
+	
+	    
+</head>              
+<body>     
+<div id="formControllerDiv"                        
+	data-ng-controller="formController">
+ 
+ 
+ <!-- <input type="text"	class="form-control" id="aadhaar" 
+ placeholder="Enter Aadhaar" data-ng-model="data.object.aadhaar">   
+ <br/>
+ <button type="button" class="btn btn-success"
+								data-ng-click="save(data.object)"
+								class="btn btn-sm btn-success">Save</button> -->     
+   <div class="col-md-3">
+							<label>File</label> <input type="file" id="aadhaar"
+								data-ng-model="data.object.file"  
+								onchange="angular.element(this).scope().uploadFiles(this,'File')" />
+						</div>
+                     
+            
+ </div>      
+ <script type="text/javascript">            
+		jQuery(document).ready(function(){ 
+			angular.bootstrap(jQuery("#formControllerDiv"), [ 'formModule' ]);
+		});
+	
+</script>     
+</body>
+</html>
