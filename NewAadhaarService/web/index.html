@@ -19,7 +19,7 @@
 	                      
 	<!-- Custom CSS -->            
 	 <link href="/andromeda/css/general/andromeda.css" rel="stylesheet" />      
-	<link rel="stylesheet" href="/newaadhaarservice/css/general/Style.css"/>   
+	<link rel="stylesheet" href="/studentservice/css/general/Style.css"/>   
 	   
 	<!-- Built- IN Scripts  -->     
 	<script type="text/javascript" src="/andromeda/scripts/lib/angular/angular.js"></script>
@@ -36,15 +36,15 @@
 	<script src="/andromeda/scripts/lib/FileSaver.js"></script>
 	
 	
-	<script src="/newaadhaarservice/scripts/common/sweetalert-dev.js"></script>  
-	<link rel="stylesheet" href="/newaadhaarservice/css/general/sweetalert.css">       
+	<script src="/studentservice/scripts/common/sweetalert-dev.js"></script>  
+	<link rel="stylesheet" href="/studentservice/css/general/sweetalert.css">         
 	
 	 
-
+   
 	<!-- Custom Scripts -->
-    <script type="text/javascript" src="/newaadhaarservice/scripts/common/Andromeda.js"></script>
+    <script type="text/javascript" src="/studentservice/scripts/common/Andromeda.js"></script>
 	
-	<script type="text/javascript" src="/newaadhaarservice/scripts/general/formModule.js"></script>
+	<script type="text/javascript" src="/studentservice/scripts/general/formModule.js"></script>
 	
 	    
 </head>              
@@ -53,18 +53,14 @@
 	data-ng-controller="formController">
  
  
- <!-- <input type="text"	class="form-control" id="aadhaar" 
- placeholder="Enter Aadhaar" data-ng-model="data.object.aadhaar">   
+ <input type="text"	class="form-control" id="pin" 
+ placeholder="Enter PIN" data-ng-model="data.object.pin">       
  <br/>
- <button type="button" class="btn btn-success"
-								data-ng-click="save(data.object)"
-								class="btn btn-sm btn-success">Save</button> -->     
-   <div class="col-md-3">
-							<label>File</label> <input type="file" id="aadhaar"
-								data-ng-model="data.object.file"  
-								onchange="angular.element(this).scope().uploadFiles(this,'File')" />
-						</div>
-                     
+ <button type="button" class="btn btn-success"  
+								data-ng-click="getStudentData(data.object)"
+								class="btn btn-sm btn-success">Save</button>     
+   
+                       
             
  </div>      
  <script type="text/javascript">            

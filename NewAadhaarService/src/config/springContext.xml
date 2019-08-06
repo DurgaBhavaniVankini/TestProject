@@ -10,31 +10,14 @@
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
 		<property name="jndiName" value="java:comp/env/jdbc/amdds" />
 	</bean>
 
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="dataSource"></property>
-	</bean>
+	</bean>    
 
-	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-		<property name="host" value="smtp.gmail.com" />
-		<property name="username" value="joinus@apssdc.in" />
-		<property name="password" value="qwertykeypad" />  
-		<property name="javaMailProperties">
-			<props>
-				<prop key="mail.debug">true</prop>
-				<prop key="mail.smtp.auth">true</prop>
-				<prop key="mail.smtp.starttls.enable">true</prop>
-				<prop key="mail.smtp.EnableSSL.enable">true</prop>
-				<prop key="mail.smtp.socketFactory.port">465</prop>
-				<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
-				<prop key="mail.smtp.port">465</prop>   
-				<prop key="mail.smtp.socketFactory.fallback">false</prop>   
-			</props>   
-		</property>
-	</bean>   
       
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
@@ -43,8 +26,8 @@
 	   
 	
 
-	<context:component-scan base-package="in.apssdc.siemens" />
-
-	<mvc:annotation-driven /> -->
 	<context:component-scan base-package="in.apssdc" />
+
+	<mvc:annotation-driven />
+	
 </beans>
